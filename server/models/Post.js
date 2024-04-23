@@ -1,0 +1,34 @@
+import mongoose from "mongoose";
+
+const postSchema = new mongoose.Schema(
+  {
+    image: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    contentOne: {
+      type: String,
+      required: true,
+    },
+    contentTwo: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+
+const Post = mongoose.model("Post", postSchema);
+export default Post;
